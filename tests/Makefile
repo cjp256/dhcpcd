@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: BSD-2-Clause
 # Copyright (c) 2017-2019 Roy Marples <roy@marples.name>
 
-SUBDIRS=	crypt eloop-bench
+SUBDIRS=	crypt eloop-bench backoff
 
-all: 
+all:
 	for x in ${SUBDIRS}; do cd $$x; ${MAKE} $@ || exit $$?; cd ..; done
 
 install:
